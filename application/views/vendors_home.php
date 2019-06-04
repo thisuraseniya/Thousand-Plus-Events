@@ -163,7 +163,7 @@
             google.maps.event.addDomListener(window, 'load', initMap);
         </script>
         <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3ylkdwUlblwMdOgXSFfcd92uqgDfBKAo&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=<Your_maps_api_key_here>&callback=initMap">
         </script>
                                
                 </div>
