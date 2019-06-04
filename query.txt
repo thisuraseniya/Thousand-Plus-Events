@@ -1,0 +1,29 @@
+ALTER TABLE logistics_users ADD CONSTRAINT fk_users_logi FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE logistics_department ADD CONSTRAINT fk_event_logi FOREIGN KEY (event) REFERENCES events(id) ON DELETE CASCADE;
+ALTER TABLE logistics_tasks ADD CONSTRAINT fk_task_logi_user FOREIGN KEY (completed_by) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE logistics_tasks ADD CONSTRAINT fk_task_logi FOREIGN KEY (dept_id) REFERENCES logistics_department(id) ON DELETE CASCADE;
+ALTER TABLE logistics_users ADD CONSTRAINT fk_user_logi FOREIGN KEY (dept_id) REFERENCES logistics_department(id) ON DELETE CASCADE;
+
+ALTER TABLE decorations_users ADD CONSTRAINT fk_users_deco FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE decorations_department ADD CONSTRAINT fk_event_deco FOREIGN KEY (event) REFERENCES events(id) ON DELETE CASCADE;
+ALTER TABLE decorations_tasks ADD CONSTRAINT fk_task_deco_user FOREIGN KEY (completed_by) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE decorations_tasks ADD CONSTRAINT fk_task_deco FOREIGN KEY (dept_id) REFERENCES decorations_department(id) ON DELETE CASCADE;
+ALTER TABLE decorations_users ADD CONSTRAINT fk_user_deco FOREIGN KEY (dept_id) REFERENCES decorations_department(id) ON DELETE CASCADE;
+
+ALTER TABLE marketing_users ADD CONSTRAINT fk_users_market FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE marketing_department ADD CONSTRAINT fk_event_market FOREIGN KEY (event) REFERENCES events(id) ON DELETE CASCADE;
+ALTER TABLE marketing_tasks ADD CONSTRAINT fk_task_market_user FOREIGN KEY (completed_by) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE marketing_tasks ADD CONSTRAINT fk_task_market FOREIGN KEY (dept_id) REFERENCES marketing_department(id) ON DELETE CASCADE;
+ALTER TABLE marketing_users ADD CONSTRAINT fk_user_market FOREIGN KEY (dept_id) REFERENCES marketing_department(id) ON DELETE CASCADE;
+
+ALTER TABLE sales_users ADD CONSTRAINT fk_users_sales FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE sales_department ADD CONSTRAINT fk_event_sales FOREIGN KEY (event) REFERENCES events(id) ON DELETE CASCADE;
+ALTER TABLE sales_tasks ADD CONSTRAINT fk_task_sales_user FOREIGN KEY (completed_by) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE sales_tasks ADD CONSTRAINT fk_task_sales FOREIGN KEY (dept_id) REFERENCES sales_department(id) ON DELETE CASCADE;
+ALTER TABLE sales_users ADD CONSTRAINT fk_user_sales FOREIGN KEY (dept_id) REFERENCES sales_department(id) ON DELETE CASCADE;
+
+ALTER TABLE registrations_users ADD CONSTRAINT fk_users_registrations FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE registrations_department ADD CONSTRAINT fk_event_registrations FOREIGN KEY (event) REFERENCES events(id) ON DELETE CASCADE;
+ALTER TABLE registrations_tasks ADD CONSTRAINT fk_task_registrations_user FOREIGN KEY (completed_by) REFERENCES users(username) ON DELETE CASCADE;
+ALTER TABLE registrations_tasks ADD CONSTRAINT fk_task_registrations FOREIGN KEY (dept_id) REFERENCES registrations_department(id) ON DELETE CASCADE;
+ALTER TABLE registrations_users ADD CONSTRAINT fk_user_registrations FOREIGN KEY (dept_id) REFERENCES registrations_department(id) ON DELETE CASCADE;
